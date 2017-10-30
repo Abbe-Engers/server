@@ -1,12 +1,18 @@
 var bal;
 var ballen = [];
 var aantalBallen = 3;
+var xball = 30;
+var yball = 20;
+var ballSize = 10;
+var ballcolor = [230, 40, 40];
+var ballspeedx = 5;
+var ballspeedy = 3;
 
 function setup(){
   createCanvas(innerWidth - 20, innerHeight - 20);
 
   for (var i = 0; i< aantalBallen; i++){
-    bal = new Bal(21 + i, 21, 10, 5 + 0.1*i, 3+0.1*i);
+    bal = new Bal(xball + i, yball, ballSize, ballspeedy + 0.3*i, ballspeedx + 0.3*i);
     ballen.push(bal);
   }
 }
@@ -28,6 +34,8 @@ function Bal(x, y, radius, xspd, yspd){
   this.ySpeed = yspd;
 
   this.teken = function(){
+    noStroke();
+    fill(ballcolor);
     ellipse(this.xPos, this.yPos, 2*this.radius, 2*this.radius);
   }
 
