@@ -53,7 +53,7 @@ function Bal(x, y, radius, xspd, yspd, ballcolor1, ballcolor2, ballcolor3) {
             if (this.xSpeed < 0) {
                 this.xSpeed = -4;
             };
-            elseif (this.xSpeed > 0) {
+            else if (this.xSpeed > 0) {
                 this.xSpeed = 4;
             };
         };
