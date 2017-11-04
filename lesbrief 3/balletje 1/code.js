@@ -37,5 +37,4 @@ function drawCar(xball, yball, ballSize){
     fill(200, 40, 40);
     ellipse(xball, yball, ballSize, ballSize);
     ellipse(xball, yball, ballSize, ballSize);
-
 }
